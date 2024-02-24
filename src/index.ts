@@ -1,7 +1,11 @@
 import { Elysia } from "elysia";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+const app = new Elysia();
+const PORT = process.env.PORT;
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+app.group("/api/v1/auth", (router) => router.get("/", async () => "Hello auth service"));
+
+app.listen(PORT);
+
+console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
+
