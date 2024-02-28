@@ -2,9 +2,12 @@ import { Elysia } from "elysia";
 import { login } from "./services/auth";
 import { ILogin } from "./interfaces/auth";
 import { jwt } from "@elysiajs/jwt";
+import cors from "@elysiajs/cors";
 
 const app = new Elysia();
 const PORT: any = process.env.PORT;
+
+app.use(cors());
 
 app.group("/api/v1/auth", (router) =>
 	router
