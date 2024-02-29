@@ -1,15 +1,8 @@
-# Elysia with Bun runtime
+# Auth service
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+## Features
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+- Login
 
-Open http://localhost:3000/ with your browser to see the result.
+### Power by Elysia with Bun runtime
+
